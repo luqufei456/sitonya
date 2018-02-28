@@ -1,24 +1,24 @@
-.prompt, .prompt-red {
+.prompt,.prompt-red{
     display: block;
     text-indent: 100px;
 }
 
-.prompt-red {
+.prompt-red{
     color: red;
 }
 
-.form-submit {
+.form-submit{
     margin: 50px auto;
     width: 960px;
     height: 720px;
 }
 
-.form-submit li textarea {
+.form-submit li textarea{
     width: 720px;
     height: 95px;
 }
 
-.form-submit li label {
+.form-submit li label{
     width: 100px;
     height: 40px;
     line-height: 40px;
@@ -26,7 +26,7 @@
     font-size: 14px;
 }
 
-.form-submit li .input_box {
+.form-submit li .input_box{
     width: 720px;
     height: 38px;
     border: 1px solid #e0e0e0;
@@ -36,9 +36,13 @@
     background-color: #f8f8f8;
 }
 
-.form-submit .select_box {
+.form-submit .select_box{
     width: 200px;
     height: 38px;
     border: 1px solid #e0e0e0;
     margin-right: 30px;
+}
+
+.spacing li{
+    margin: 20px auto;
 }

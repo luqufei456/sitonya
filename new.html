@@ -1,147 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>天天生鲜水果节日</title>
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/new.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>提交表单申请</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/new.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/new.css">
 </head>
 <body>
-<div class="adv-wrapper-text">&lt广告&gt</div>
-<!-- 导航条 -->
-<div class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-        <!-- logo -->
-        <div class="navbar-header">
-            <!-- 小图标 -->
-            <button class="navbar-toggle" data-toggle="collapse" data-target="#fruit_menu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand" style="color: yellow">ofo</a>
-        </div>
+    <div class="adv-wrapper-text">&lt广告&gt</div>
+	<!-- 导航条 -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<!-- logo -->
+			<div class="navbar-header">
+				<!-- 小图标 -->
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#fruit_menu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand" style="color: yellow">ofo</a>
+			</div>
 
-        <div class="collapse navbar-collapse" id="fruit_menu">
-            <!-- 菜单 -->
-            <ul class="nav navbar-nav">
-                <li><a href="./index.html">首页</a></li>
-                <li><a href="#">创建表单</a></li>
-                <li><a href="#">登录</a></li>
-                <li><a href="#">审核表单</a></li>
-            </ul>
+			<div class="collapse navbar-collapse" id="fruit_menu">
+				<!-- 菜单 -->
+				<ul class="nav navbar-nav">
+					<li><a href="./index.html">首页</a></li>
+					<li><a href="#">创建表单</a></li>
+					<li><a href="#">登录</a></li>
+					<li><a href="#">审核表单</a></li>
+				</ul>
 
-            <form action="" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="查询表单">
-                        <span class="input-group-btn">
-								<button class="btn btn-default"><span
-                                        class="glyphicon glyphicon-search"></span></button>
+				<form action="" class="navbar-form navbar-right">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="查询表单">
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 							</span>
-                    </div>
-                </div>
-            </form>
-        </div>
+						</div>
+					</div>
+				</form>
+			</div>
 
-    </div>
-</div>
+		</div>
+	</div>
 
-<div class="form-submit clearfix">
-    <form action="index.html" method="post">
-        <ul>
-            <li>
-                <label>用户：</label>
-                <input type="text" name="input_name" id="input_id" class="input_box">
-                <br/>
-                <span class="prompt">需求提交用户</span>
-            </li>
-            <br/>
+	<div class="form-submit clearfix">
+		<form action="index.html" method="post">
+			<ul class="spacing">
 
-            <li>
-                <label>优先级：<span style="color:red">*</span></label>
-                <label><input type="radio" name="priority">紧急</label>
-                <label><input type="radio" name="priority" checked="checked">普通</label>
-                <br/>
+				<li>
+                <label>申请权限：</label>
+					<select class="input_box" id="choose_id">
+						<option>申请表权限</option>
+						<option>申请库权限</option>
+					</select>
+            	</li>
 
-                <span class="prompt">处理优先级</span>
-            </li>
-            <br/>
+				<li>
+					<label>组名字：<span style="color:red">*</span></label>
+					<input type="text" name="group_name" id="group_id" class="input_box" placeholder="运维组">
+				</li>
 
-            <li>
-                <label style="float: left;">需求原因：<span style="color:red">*</span></label>
-                <textarea id="text_put"></textarea>
-                <br/>
-                <span class="prompt">需求内容,尽可能详细,特殊机器配置可以在此说明</span>
-            </li>
-            <br/>
+				<li>
+					<label>组缩写：<span style="color:red">*</span></label>
+					<input type="text" name="group_abb" id="abb_id" class="input_box" placeholder="SRE">
+				</li>
 
-            <li>
-                <label>项目：</label>
-                <select class="input_box">
-                    <option>请选择项目</option>
-                    <option>项目1</option>
-                    <option>项目2</option>
-                    <option>项目3</option>
-                    <option>项目4</option>
-                </select>
-                <br/>
-                <span class="prompt-red">机器用途为个人开发机的话该选项为空</span>
-            </li>
-            <br/>
+				<li>
+					<label>负责人：<span style="color:red">*</span></label>
+					<input type="text" name="person_name" id="name_id" class="input_box" placeholder="李小明">
+				</li>
 
-            <li>
-                <label>机器用途：<span style="color:red">*</span></label>
-                <select class="input_box" id="use_box">
-                    <option>选择机器用途</option>
-                    <option>用途1</option>
-                    <option>用途2</option>
-                    <option>用途3</option>
-                    <option>用途4</option>
-                </select>
-                <br/>
-                <span class="prompt-red">生产环境服务器请找应用运维(*  *)申请</span>
-            </li>
-            <br/>
+				<li>
+					<label>库名字：<span style="color:red">*</span></label>
+					<input type="text" name="base_name" id="base_id" class="input_box" placeholder="db1">
+				</li>
 
-            <li>
-                <label>主机名：</label>
-                <input type="text" name="host_name" id="host_name" class="input_box">
-                <span class="prompt">指定主机名中间部分，默认使用工程名，如果包含下划线会使用'-'替换，例如:web-www.</span>
-                <span class="prompt-red">用途为个人开发或测试,不需要填写该项</span>
-            </li>
-            <br/>
+				<li id="table_id">
+					<label>表名字：</label>
+					<input type="text" name="table_name" class="input_box" placeholder="table1">
+				</li>
 
-            <li>
-                <label>机器配置：<span style="color:red">*</span></label>
-                <select id="a" class="select_box">
-                    <option value=""></option>
-                </select>
-                <select id="b" class="select_box">
-                    <option value=""></option>
-                </select>
-                <select id="c" class="select_box">
-                    <option value="">阿里云华北2</option>
-                </select>
-                <input type="submit" name="" value="添加" class="btn btn-primary">
-                <br/>
-                <span class="prompt-red">温馨提示:机器配置好后记得点击添加按钮</span>
-            </li>
-            <br/>
+				<li>
+					<label>是否只读：</label>
+					<label><input type="radio" name="priority" checked="checked">只读</label>
+					<label><input type="radio" name="priority">读写</label>
+				</li>
 
-            <li id="add">
-                <input type="submit" value="提交" name="" class="btn btn-danger">
-            </li>
-        </ul>
+				<li>
+					<label style="float: left;">备注：</label>
+					<textarea id="text_put" placeholder="因**原因需要读/读写表**/库**"></textarea>
+					<br />
+					<span class="prompt">有问题联系</span>
+				</li>
 
-        <!--<input type="submit" value="提交" name="" class="btn btn-danger" id="add">-->
-    </form>
-</div>
+				<li id="add">
+					<input type="submit" value="提交" name="" class="btn btn-info">
+				</li>
+			</ul>
+
+			<!--<input type="submit" value="提交" name="" class="btn btn-danger" id="add">-->
+		</form>
+	</div>
 </body>
 </html>
