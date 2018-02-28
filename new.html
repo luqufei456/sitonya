@@ -39,7 +39,7 @@
 				<form action="" class="navbar-form navbar-right">
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="查询表单">
+							<input type="text" class="form-control" name="query_table" placeholder="查询表单">
 							<span class="input-group-btn">
 								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 							</span>
@@ -57,7 +57,7 @@
 
 				<li>
                 <label>申请权限：</label>
-					<select class="input_box" id="choose_id">
+					<select class="input_box" id="choose_id" name="choose">
 						<option>申请表权限</option>
 						<option>申请库权限</option>
 					</select>
@@ -96,7 +96,7 @@
 
 				<li>
 					<label style="float: left;">备注：</label>
-					<textarea id="text_put" placeholder="因**原因需要读/读写表**/库**"></textarea>
+					<textarea id="text_put" name="text_put" placeholder="因**原因需要读/读写表**/库**"></textarea>
 					<br />
 					<span class="prompt">有问题联系</span>
 				</li>
