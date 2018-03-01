@@ -3,9 +3,11 @@ $(function () {
     $('#choose_id').change(function () {
         var choose = $('#choose_id').val();
         if(choose == '申请库权限'){
+            $('#table').attr({"name":""});
             $('#table_id').hide();
         }
         else{
+            $('#table').attr({"name":"table"});
             $('#table_id').show();
         }
     });
@@ -59,6 +61,7 @@ $(function () {
         check_base_name();
         if(error_group_name == false && error_group_abb == false && error_person_name == false && error_base_name == false){
             var val = $('#table').val();
+            alert(val);
             if(val == ''){
                 $.ajax({
                     url: 'http://localhost:8080/api/permission/database',
@@ -68,9 +71,11 @@ $(function () {
                 })
                 .done(function(data) {
                     alert('申请成功');
+                    alert($('#form1').serialize());
                 })
                 .fail(function() {
                     alert('服务器超时，请重试！');
+                    alert($('#form1').serialize());
                 });
             }
             else{
@@ -82,9 +87,11 @@ $(function () {
                 })
                 .done(function(data) {
                     alert('申请成功');
+                    alert($('#form1').serialize());
                 })
                 .fail(function() {
                     alert('服务器超时，请重试！');
+                    alert($('#form1').serialize());
                 });
             }
         }
