@@ -52,13 +52,41 @@ $(function () {
     }
 
 
-    $('form').submit(function(){
+    $('#form_put').click(function(){
         check_group_name();
         check_group_abb();
         check_person_name();
         check_base_name();
         if(error_group_name == false && error_group_abb == false && error_person_name == false && error_base_name == false){
-            alert('申请成功');
+            var val = $('#table').val();
+            if(val == ''){
+                $.ajax({
+                    url: 'http://localhost:8080/api/set/database',
+                    type: 'GET',
+                    dataType: 'json',
+                    data:$('#form1').serialize()
+                })
+                .done(function(data) {
+                    alert('申请成功');
+                })
+                .fail(function() {
+                    alert('服务器超时，请重试！');
+                });
+            }
+            else{
+                $.ajax({
+                    url: 'http://localhost:8080/api/set/table',
+                    type: 'GET',
+                    dataType: 'json',
+                    data:$('#form1').serialize()
+                })
+                .done(function(data) {
+                    alert('申请成功');
+                })
+                .fail(function() {
+                    alert('服务器超时，请重试！');
+                });
+            }
         }
         else{
             alert('请输入正确的申请');
