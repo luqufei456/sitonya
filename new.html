@@ -36,10 +36,10 @@
 					<li><a href="#">审核表单</a></li>
 				</ul>
 
-				<form action="" class="navbar-form navbar-right">
+				<form action="" class="navbar-form navbar-right" method="get">
 					<div class="form-group">
 						<div class="input-group">
-							<input type="text" class="form-control" name="query_table" placeholder="查询表单">
+							<input type="text" class="form-control" placeholder="查询表单">
 							<span class="input-group-btn">
 								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 							</span>
@@ -52,12 +52,12 @@
 	</div>
 
 	<div class="form-submit clearfix">
-		<form action="https://localhost:8080/api/set/database?" method="post">
+		<form action="https://localhost:8080/api/set/database?" method="get" id="form1">
 			<ul class="spacing">
 
 				<li>
                 <label>申请权限：</label>
-					<select class="input_box" id="choose_id" name="choose">
+					<select class="input_box" id="choose_id">
 						<option>申请表权限</option>
 						<option>申请库权限</option>
 					</select>
@@ -70,39 +70,39 @@
 
 				<li>
 					<label>组缩写：<span style="color:red">*</span></label>
-					<input type="text" name="group_abb" id="abb_id" class="input_box" placeholder="SRE">
+					<input type="text" name="group_id" id="abb_id" class="input_box" placeholder="SRE">
 				</li>
 
 				<li>
 					<label>负责人：<span style="color:red">*</span></label>
-					<input type="text" name="person_name" id="name_id" class="input_box" placeholder="李小明">
+					<input type="text" name="manager" id="name_id" class="input_box" placeholder="李小明">
 				</li>
 
 				<li>
 					<label>库名字：<span style="color:red">*</span></label>
-					<input type="text" name="base_name" id="base_id" class="input_box" placeholder="db1">
+					<input type="text" name="database" id="base_id" class="input_box" placeholder="db1">
 				</li>
 
 				<li id="table_id">
 					<label>表名字：</label>
-					<input type="text" name="table_name" class="input_box" placeholder="table1">
+					<input type="text" name="table" class="input_box" placeholder="table1" id="table">
 				</li>
 
 				<li>
 					<label>是否只读：</label>
-					<label><input type="radio" name="priority" checked="checked" value="只读">只读</label>
-					<label><input type="radio" name="priority" value="读写">读写</label>
+					<label><input type="radio" name="readonly" checked="checked" value="只读">只读</label>
+					<label><input type="radio" name="readonly" value="读写">读写</label>
 				</li>
 
 				<li>
 					<label style="float: left;">备注：</label>
-					<textarea id="text_put" name="text_put" placeholder="因**原因需要读/读写表**/库**"></textarea>
+					<textarea id="text_put" placeholder="因**原因需要读/读写表**/库**" name="text"></textarea>
 					<br />
 					<span class="prompt">有问题联系</span>
 				</li>
 
 				<li id="add">
-					<input type="submit" value="提交" name="" class="btn btn-info">
+					<input type="button" value="提交" name="" class="btn btn-info" id="form_put">
 				</li>
 			</ul>
 
