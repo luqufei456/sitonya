@@ -61,7 +61,7 @@ $(function () {
             var val = $('#table').val();
             if(val == ''){
                 $.ajax({
-                    url: 'http://localhost:8080/api/set/database',
+                    url: 'http://localhost:8080/api/permission/database',
                     type: 'GET',
                     dataType: 'json',
                     data:$('#form1').serialize()
@@ -75,7 +75,7 @@ $(function () {
             }
             else{
                 $.ajax({
-                    url: 'http://localhost:8080/api/set/table',
+                    url: 'http://localhost:8080/api/permission/table',
                     type: 'GET',
                     dataType: 'json',
                     data:$('#form1').serialize()
